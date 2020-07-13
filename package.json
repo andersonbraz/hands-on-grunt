@@ -1,20 +1,27 @@
 {
   "name": "hands-on-grunt",
   "version": "1.0.0",
-  "description": "Hands-on with Grunt - Grunt é um executor de tarefas Javascript.",,
-  "main": "app.js",
+  "description": "Hands-on with Grunt - Grunt é um executor de tarefas Javascript.",
+  "main": "Gruntfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andersonbraz/hands-on-grunt.git"
+  },
   "keywords": [],
-  "author": "Anderson Braz",
-  "license": "MIT",
+  "author": "Anderson Braz (contato@andersonbraz.com)",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/andersonbraz/hands-on-grunt/issues"
+  },
+  "homepage": "https://github.com/andersonbraz/hands-on-grunt#readme",
   "devDependencies": {
-    "grunt": "1.2.1",
-    "grunt-contrib-concat": "1.0.1",
-    "grunt-contrib-connect": "2.1.0",
-    "grunt-contrib-uglify": "4.0.1",
-    "grunt-sass": "3.1.0",
-    "grunt-war": "0.5.1"
+    "grunt": "^1.2.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-connect": "^2.1.0",
+    "grunt-contrib-uglify": "^4.0.1",
+    "grunt-war": "^0.5.1"
   }
 }
