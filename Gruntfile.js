@@ -4,12 +4,12 @@ module.exports = function(grunt){
         pkg: grunt.file.readJSON("package.json")
     });
 
-    grunt.registerTask("run", function(){
-        console.log("Running...");
+    grunt.registerTask("dev", function(){
+        console.log("Development mode...");
     });
 
-    grunt.registerTask("sleep", function(){
-        console.log("Sleeping...");
+    grunt.registerTask("prod", function(){
+        console.log("Production mode ...");
     });
 
 };
