@@ -16,7 +16,11 @@ npm init -y
 ## Step 03
 
 ```shell
-npm install grunt grunt-contrib-concat grunt-contrib-uglify grunt-saas grunt-war --save-dev
+npm install grunt --save-dev
+npm install grunt-contrib-concat --save-dev
+npm install grunt-contrib-uglify --save-dev
+npm install grunt-saas --save-dev
+npm install grunt-war --save-dev
 ```
 
 ## Step 04
