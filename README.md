@@ -32,7 +32,7 @@ npm install grunt-war --save-dev
 
 ## Step 04
 
-Iniciando o arquivo ˜˜Gruntfile.js˜˜
+Iniciando o arquivo ~~Gruntfile.js~~
 
 ```javascript
 module.exports = function(grunt){
