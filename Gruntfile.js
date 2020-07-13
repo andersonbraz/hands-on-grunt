@@ -5,7 +5,7 @@ module.exports = function(grunt){
     });
 
     grunt.registerTask("dev", function(){
-        console.log("Development mode...");
+        console.log("Development mode ...");
     });
 
     grunt.registerTask("prod", function(){
