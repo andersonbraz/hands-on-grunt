@@ -2,10 +2,22 @@ module.exports = function (grunt) {
 
   grunt.loadNpmTasks("grunt-contrib-connect");
   grunt.loadNpmTasks('grunt-war');
+  grunt.loadNpmTasks('grunt-babel');
 
   const pkg = grunt.file.readJSON("package.json");
 
   grunt.initConfig({
+    babel: {
+      options: {
+        sourceMap: true,
+        presets: ['@babel/preset-env']
+      },
+      dist: {
+        files: {
+          'dist/app.js': 'src/app.js'
+        },
+      },
+    },
     connect: {
       server: {
         options: {

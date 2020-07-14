@@ -4,6 +4,10 @@ Hands-on with Grunt - Grunt é um executor de tarefas Javascript.
 
 [EXAMPLES](https://www.youtube.com/playlist?list=PL4cUxeGkcC9j85fkVyCzCMJDfteLtrl_y)
 
+## Recursos Utilizados
+
+
+
 ## Step 01
 
 Criando o diretório do seu projeto.
@@ -28,18 +32,6 @@ Instalando as dependências de desenvolvimento.
 npm install angular --save-dev
 npm install grunt --save-dev
 npm install grunt-contrib-connect --save-dev
-npm install grunt-contrib-concat --save-dev
-npm install grunt-contrib-uglify --save-dev
-npm install grunt-saas --save-dev
-npm install grunt-war --save-dev
-```
-
-OU
-
-```shell
-npm install angular --save-dev
-npm install grunt --save-dev
-npm install grunt-http-server --save-dev
 npm install grunt-contrib-concat --save-dev
 npm install grunt-contrib-uglify --save-dev
 npm install grunt-saas --save-dev
