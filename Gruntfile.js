@@ -1,6 +1,7 @@
 module.exports = function (grunt) {
 
   grunt.loadNpmTasks("grunt-contrib-connect");
+  grunt.loadNpmTasks('grunt-war');
 
   const pkg = grunt.file.readJSON("package.json");
 
@@ -16,6 +17,22 @@ module.exports = function (grunt) {
         },
       },
     },
+    war: {
+      target: {
+        options: {
+          war_dist_folder: './dist',    /* Folder where to generate the WAR. */
+          war_name: `${pkg.name}-${pkg.version}`                   /* The name fo the WAR file (.war will be the extension) */
+        },
+        files: [
+          {
+            expand: true,
+            cwd: 'src',
+            src: ['**'],
+            dest: ''
+          }
+        ]
+      }
+    }
   });
 
   grunt.registerTask("dev", function () {
