@@ -1,4 +1,8 @@
+const fse = require('fs-extra');
+
 module.exports = function (grunt) {
+
+  const fileDist = "./dist";
 
   grunt.loadNpmTasks("grunt-contrib-connect");
   grunt.loadNpmTasks('grunt-war');
@@ -53,21 +57,10 @@ module.exports = function (grunt) {
     }
   });
 
-  grunt.registerTask("dev", function () {
-    console.log('Development mode ...');
-    console.log(`${package.name}-${package.version}`);
-  });
-
-  grunt.registerTask("prod", function () {
-    console.log("Production mode ...");
-    console.log(`${package.name}-${package.version}`);
-  });
-
   grunt.registerTask("clean", function () {
-    console.log('Development mode ...');
-    console.log(`${package.name}-${package.version}`);
+    fse.emptyDirSync(fileDist);
   });
 
-  grunt.registerTask("default", ['war', 'connect']);
+  grunt.registerTask("default", ['clean', 'war', 'connect']);
 
 };
