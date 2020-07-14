@@ -23,6 +23,7 @@ npm init -y
 Instalando as dependências de desenvolvimento.
 
 ```shell
+npm install angular --save-dev
 npm install grunt --save-dev
 npm install grunt-contrib-connect --save-dev
 npm install grunt-contrib-concat --save-dev
@@ -49,9 +50,16 @@ module.exports = function(grunt){
 };
 ```
 
-## Step 05
+## Testing - Step 04
 
 ```shell
+grunt dev
+grunt prod
+```
+
+## Step 05
+
+```javascript
 module.exports = function (grunt) {
 
   grunt.loadNpmTasks("grunt-contrib-connect");
@@ -79,6 +87,22 @@ module.exports = function (grunt) {
     console.log("Production mode ...");
   });
 };
+```
+
+## Testing - Step 05
+
+```shell
+grunt connect
+```
+
+## Step 06
+
+```shell
+```
+
+## Step 06
+
+```shell
 ```
 
 ## Step 06
