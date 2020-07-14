@@ -1,5 +1,3 @@
-function showTest(){
+this.showTest = function(){
     console.log("Testing...");
 }
-
-module.exports = { showTest };

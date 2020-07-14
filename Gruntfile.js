@@ -62,10 +62,10 @@ module.exports = function (grunt) {
     fse.emptyDirSync(fileDist);
   });
 
-  grunt.registerTask("test", function () {
+  grunt.registerTask("prepare", function () {
     devtools.showTest();
   });
 
-  grunt.registerTask("default", ['clean', 'war', 'connect']);
+  grunt.registerTask("default", ['prepare', 'clean', 'war', 'connect']);
 
 };
