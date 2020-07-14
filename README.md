@@ -68,6 +68,8 @@ grunt
 
 ## Step 05
 
+Incrementando um webserver usando o grunt-connect.
+
 ```javascript
 module.exports = function (grunt) {
 
@@ -113,7 +115,7 @@ grunt connect
 
 ## Step 07
 
-Incrementando uma distribuição com package.war.
+Incrementando uma distribuição usando o grunt-war.
 
 ```javascript
 module.exports = function (grunt) {
