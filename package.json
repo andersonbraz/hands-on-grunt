@@ -19,11 +19,14 @@
   },
   "homepage": "https://github.com/andersonbraz/hands-on-grunt#readme",
   "devDependencies": {
+    "@babel/cli": "7.10.4",
+    "@babel/core": "7.10.4",
     "angular": "^1.8.0",
     "grunt": "^1.2.1",
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-connect": "^2.1.0",
     "grunt-contrib-uglify": "^4.0.1",
-    "grunt-war": "^0.5.1"
+    "grunt-war": "^0.5.1",
+    "jshint": "^2.11.1"
   }
 }
