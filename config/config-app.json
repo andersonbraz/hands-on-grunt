@@ -1,12 +1,12 @@
 {
     "vendor":{
         "js": {
-            "jquery": "node_modules",
-            "popper": "node_modules",
-            "bootstrap": "node_modules"
+            "jquery": "node_modules/dist/jquery.js",
+            "popper": "node_modules/dist/popper.js",
+            "bootstrap": "node_modules/dist/js/bootstrap.js"
         },
         "css": {
-            "bootstrap": "node_modules"
+            "bootstrap": "node_modules/dist/css/bootstrap.css"
         }
     }    
 }
