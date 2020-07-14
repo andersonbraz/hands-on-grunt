@@ -95,17 +95,22 @@ module.exports = function (grunt) {
 grunt connect
 ```
 
-## Step 06
+## Step 07
 
 ```shell
 ```
 
-## Step 06
+## Step 08
 
 ```shell
 ```
 
-## Step 06
+## Step 09
+
+```shell
+```
+
+## Step 10
 
 ```shell
 ```
