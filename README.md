@@ -249,22 +249,3 @@ module.exports = function (grunt) {
   grunt.registerTask("default", ["dev", "prod"]);
 };
 ```
-
-## Testing - Step 08
-
-Neste cenário em 14.07.2020 foi evidenciado várias vunerabilidades e dependências depreciadas. Portanto, oriento utilizar o grunt-connect.
-
-```shell
-grunt http-server:dev
-grunt war
-```
-
-## Step 09
-
-```shell
-```
-
-## Step 10
-
-```shell
-```
