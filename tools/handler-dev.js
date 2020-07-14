@@ -2,4 +2,4 @@ function showTest(){
     console.log("Testing...");
 }
 
-module.exports = { cleanDist };
+module.exports = { showTest };

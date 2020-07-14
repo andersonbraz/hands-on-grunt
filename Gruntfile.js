@@ -63,9 +63,9 @@ module.exports = function (grunt) {
   });
 
   grunt.registerTask("test", function () {
-    devtools.showTest();
+    devtools.cleanDist();
   });
 
-  grunt.registerTask("default", ['test']);
+  grunt.registerTask("default", ['clean', 'war', 'connect']);
 
 };
