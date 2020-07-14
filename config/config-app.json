@@ -8,5 +8,15 @@
         "css": {
             "bootstrap": "node_modules/dist/css/bootstrap.css"
         }
-    }    
+    },
+    "delivery": {
+        "destin-folder" : "dist"
+    },
+    "config":{
+        "file-config": {
+            "dev": "config-project-dev.js",
+            "prd": "config-project-prd.js",
+            "hml": "config-project-hml.js"
+        }
+    }
 }
