@@ -1,4 +1,5 @@
 const fse = require('fs-extra');
+const devtools = require('./tools/handler-dev'); 
 
 module.exports = function (grunt) {
 
@@ -61,6 +62,10 @@ module.exports = function (grunt) {
     fse.emptyDirSync(fileDist);
   });
 
-  grunt.registerTask("default", ['clean', 'war', 'connect']);
+  grunt.registerTask("test", function () {
+    devtools.showTest();
+  });
+
+  grunt.registerTask("default", ['test']);
 
 };
