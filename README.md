@@ -40,15 +40,21 @@ Iniciando o arquivo Gruntfile.js
 
 ```javascript
 module.exports = function(grunt){
-    grunt.initConfig({
-        pkg: grunt.file.readJSON("package.json")
-    });
-    grunt.registerTask("dev", function(){
-        console.log("Development mode ...");
-    });
-    grunt.registerTask("prod", function(){
-        console.log("Production mode ...");
-    });
+    
+  const pkg = grunt.file.readJSON("package.json");
+
+  grunt.registerTask("dev", function () {
+    console.log('Development mode ...');
+    console.log(`${pkg.name}-${pkg.version}`);
+  });
+
+  grunt.registerTask("prod", function () {
+    console.log("Production mode ...");
+    console.log(`${pkg.name}-${pkg.version}`);
+  });
+
+  grunt.registerTask("default", ['dev', 'prod']);
+
 };
 ```
 
@@ -66,8 +72,9 @@ module.exports = function (grunt) {
 
   grunt.loadNpmTasks("grunt-contrib-connect");
 
+  const pkg = grunt.file.readJSON("package.json");
+
   grunt.initConfig({
-    pkg: grunt.file.readJSON("package.json"),
     connect: {
       server: {
         options: {
@@ -82,13 +89,19 @@ module.exports = function (grunt) {
   });
 
   grunt.registerTask("dev", function () {
-    console.log("Development mode ...");
+    console.log('Development mode ...');
+    console.log(`${pkg.name}-${pkg.version}`);
   });
 
   grunt.registerTask("prod", function () {
     console.log("Production mode ...");
+    console.log(`${pkg.name}-${pkg.version}`);
   });
+
+  grunt.registerTask("default", ['dev', 'prod']);
+
 };
+
 ```
 
 ## Testing - Step 05

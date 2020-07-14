@@ -27,4 +27,7 @@ module.exports = function (grunt) {
     console.log("Production mode ...");
     console.log(`${pkg.name}-${pkg.version}`);
   });
+
+  grunt.registerTask("default", ['dev', 'prod']);
+
 };
