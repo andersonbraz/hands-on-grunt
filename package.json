@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/andersonbraz/hands-on-grunt#readme",
   "devDependencies": {
-    "angular": "1.5.9",
+    "angular": "1.8.0",
     "grunt": "1.2.1",
     "grunt-contrib-concat": "1.0.1",
     "grunt-contrib-connect": "2.1.0",
