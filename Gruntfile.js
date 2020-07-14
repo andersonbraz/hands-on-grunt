@@ -63,7 +63,7 @@ module.exports = function (grunt) {
   });
 
   grunt.registerTask("test", function () {
-    devtools.cleanDist();
+    devtools.showTest();
   });
 
   grunt.registerTask("default", ['clean', 'war', 'connect']);
