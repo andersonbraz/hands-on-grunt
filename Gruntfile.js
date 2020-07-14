@@ -55,14 +55,19 @@ module.exports = function (grunt) {
 
   grunt.registerTask("dev", function () {
     console.log('Development mode ...');
-    console.log(`${pkg.name}-${pkg.version}`);
+    console.log(`${package.name}-${package.version}`);
   });
 
   grunt.registerTask("prod", function () {
     console.log("Production mode ...");
-    console.log(`${pkg.name}-${pkg.version}`);
+    console.log(`${package.name}-${package.version}`);
   });
 
-  grunt.registerTask("default", ['dev', 'prod']);
+  grunt.registerTask("clean", function () {
+    console.log('Development mode ...');
+    console.log(`${package.name}-${package.version}`);
+  });
+
+  grunt.registerTask("default", ['war', 'connect']);
 
 };
