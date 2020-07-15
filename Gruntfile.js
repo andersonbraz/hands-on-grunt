@@ -58,14 +58,11 @@ module.exports = function (grunt) {
     }
   });
 
-  grunt.registerTask("clean", function () {
-    fse.emptyDirSync(fileDist);
-  });
-
   grunt.registerTask("prepare", function () {
-    devtools.showTest();
+    devtools.cleanDist();
+    devtools.createDist();
   });
 
-  grunt.registerTask("default", ['prepare', 'clean', 'war', 'connect']);
+  grunt.registerTask("default", ['prepare', 'war', 'connect']);
 
 };
