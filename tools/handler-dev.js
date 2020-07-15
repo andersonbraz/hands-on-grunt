@@ -7,6 +7,7 @@ this.cleanDist = function () {
 };
 
 this.createDist = function () {
+  
   fse.readJson("package.json", function (err, data) {
     if (err) console.error(err);
 
@@ -61,8 +62,8 @@ this.fillDist = function (project, data) {
 
   const vendorCss = data.vendor.css;
   const vendorJs = data.vendor.js;
-  const projectCss = data.project.css;
-  const projectJs = data.project.js;
+  const appCss = data.app.css;
+  const appJs = data.app.js;
 
   vendorCss.forEach(function(element, index, array){
     fse.copy(`${element.value}`, `dist/${project}/styles/vendor.css`)
@@ -84,7 +85,7 @@ this.fillDist = function (project, data) {
     });
   });
 
-  projectCss.forEach(function(element, index, array){
+  appCss.forEach(function(element, index, array){
     fse.copy(`${element.value}`, `dist/${project}/styles/app.css`)
     .then(function(){
       console.log("Writing: ", element.value);
@@ -94,7 +95,7 @@ this.fillDist = function (project, data) {
     });
   });
 
-  projectJs.forEach(function(element, index, array){
+  appJs.forEach(function(element, index, array){
     fse.copy(`${element.value}`, `dist/${project}/styles/app.js`)
     .then(function(){
       console.log("Writing: ", element.value);
