@@ -33,11 +33,8 @@ this.createDist = function () {
 };
 
 this.fillDist = function () {
-  console.log("Start");
-  fse.readJson("config.json", function (err, data) {
-    if (err) throw err;
-    let config = JSON.stringify(data);
-    console.log(config);
+  fse.readJson("package.json", function (err, packageObj) {
+    if (err) console.error(err);
+    console.log(JSON.stringify(packageObj));
   });
-  console.log("End");
 };
