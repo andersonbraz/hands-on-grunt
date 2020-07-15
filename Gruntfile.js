@@ -1,3 +1,4 @@
+
 const tools = require("./tools/handler-dev");
 
 module.exports = function (grunt) {
@@ -68,6 +69,6 @@ module.exports = function (grunt) {
     tools.fillDist(`${package.name}`, config);
   });
 
-  grunt.registerTask('default', ['prepare', 'connect']);
+  grunt.registerTask('default', ['prepare', 'war', 'connect']);
   
 };

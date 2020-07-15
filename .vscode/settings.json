@@ -1,12 +1,22 @@
 {
-    // habilitar o format on save (formatar ao salvar)
-    "editor.formatOnSave": true,
-    // configurar as ações que devem ser executadas ao salvar um arquivo
-    "editor.codeActionsOnSave": {
-      // executar o ESLint
-      "source.fixAll.eslint": true
+  // habilitar o format on save (formatar ao salvar)
+  "editor.formatOnSave": true,
+  // configurar as ações que devem ser executadas ao salvar um arquivo
+  "editor.codeActionsOnSave": {
+    // executar o ESLint
+    "source.fixAll.eslint": true
+  },
+  // desabilitar o plugin do Prettier para arquivos .js e .jsx
+  "prettier.disableLanguages": ["javascript", "javascriptreact"],
+  //
+  "eslint.options": {
+    "useEslintrc": false,
+    "parserOptions": {
+      "ecmaVersion": 2017
     },
-    // desabilitar o plugin do Prettier para arquivos .js e .jsx
-    "prettier.disableLanguages": ["javascript", "javascriptreact"]
-  }{
+    "env": {
+      "es6": true
+    }
+  },
+  "javascript.suggestionActions.enabled": false
 }
