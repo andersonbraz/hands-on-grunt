@@ -2,6 +2,11 @@
 
 ## Recursos Utilizados
 
+| Syntax    | Description |
+| --------- | ----------- |
+| Header    | Title       |
+| Paragraph | Text        |
+
 ---
 
 ## Step 01
@@ -25,3 +30,8 @@ grunt
 ---
 
 ## Componentes e Responsabilidades
+
+| Syntax    | Description |
+| --------- | ----------- |
+| Header    | Title       |
+| Paragraph | Text        |
