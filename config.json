@@ -3,21 +3,21 @@
         "js": [
             {
                 "name": "jquery",
-                "value": "node_modules/dist/jquery.js"
+                "value": "node_modules/jquery/dist/jquery.js"
             },
             {
                 "name": "popper",
-                "value": "node_modules/dist/popper.js"
+                "value": "node_modules/popper.js/dist/popper.js"
             },
             {
                 "name": "bootstrap",
-                "value": "node_modules/dist/bootstrap.js"
+                "value": "node_modules/bootstrap/dist/js/bootstrap.js"
             }
         ],
         "css": [
             {
                 "name": "bootstrap",
-                "value": "node_modules/dist/css/bootstrap.css"
+                "value": "node_modules/bootstrap/dist/css/bootstrap.css"
             }
         ]
     },

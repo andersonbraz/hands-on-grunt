@@ -27,11 +27,33 @@ this.createDist = function () {
     });
 
     fse.ensureDir(`dist/${this.project}/styles`, function (err) {
-      console.log(`Source creating...`);
+      console.log(`Styles creating...`);
     });
+
+    fse.ensureDir(`dist/${this.project}/libs`, function (err) {
+      console.log(`Libs creating...`);
+    });
+
   });
 };
 
-this.fillDist = function (data) {
-  console.log(data.vendor.js);
+this.fillDist = function (project, data) {
+
+  const vendorCss = data.vendor.css;
+  const vendorJs = data.vendor.js;
+
+  vendorCss.forEach(function(element, index, array){
+    fse.copy(`${element.value}`, `dist/${project}/styles/vendor.css`, function(err){
+      if (err) return console.error(err);
+      console.log(element.value);
+    });
+  });
+
+  vendorJs.forEach(function(element, index, array){
+    fse.copy(`${element.value}`, `dist/${project}/libs/vendor.js`, function(err){
+      if (err) return console.error(err);
+      console.log(element.value);
+    });
+  });
+  
 };

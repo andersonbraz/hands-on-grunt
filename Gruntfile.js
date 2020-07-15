@@ -57,12 +57,11 @@ module.exports = function (grunt) {
   });
 
   grunt.registerTask("prepare", function () {
+
     tools.cleanDist();
     tools.createDist();
-  });
+    tools.fillDist(`${package.name}`, config);
 
-  grunt.registerTask("test", function () {
-    tools.fillDist(config);
   });
 
   grunt.registerTask("default", ['prepare', 'war', 'connect']);
