@@ -33,8 +33,6 @@ this.createDist = function () {
 };
 
 this.fillDist = function (data) {
-  const config = JSON.parse(data.verdor);
 
-    console.log(config);
-
+  console.log(data.vendor.js.value);
 };
