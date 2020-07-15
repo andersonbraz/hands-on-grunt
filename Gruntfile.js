@@ -1,9 +1,6 @@
-const fse = require('fs-extra');
 const devtools = require('./tools/handler-dev'); 
 
 module.exports = function (grunt) {
-
-  const fileDist = "./dist";
 
   grunt.loadNpmTasks("grunt-contrib-connect");
   grunt.loadNpmTasks('grunt-war');

@@ -1,11 +1,9 @@
 const fse = require("fs-extra");
-const pathDestin = "dist/";
-const pathOrigin = "src/";
 
 let project, version;
 
 this.cleanDist = function(){
-  fse.emptyDirSync(`${this.pathDestin}`);
+  fse.emptyDirSync("dist/");
 };
 
 this.createDist = function(){
