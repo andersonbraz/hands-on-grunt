@@ -1,7 +1,9 @@
 const tools = require("./tools/handler-dev");
 
 module.exports = function (grunt) {
+
   grunt.loadNpmTasks("grunt-contrib-connect");
+  grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks("grunt-war");
   grunt.loadNpmTasks("grunt-babel");
 
@@ -9,6 +11,16 @@ module.exports = function (grunt) {
   const config = grunt.file.readJSON("config.json");
 
   grunt.initConfig({
+    concat: {
+      dist: {
+        src: ['src/app.js'],
+        dest: 'dist/app.js'
+      }
+    },
+    jshint: {
+      beforeconcat: ['src/foo.js', 'src/bar.js'],
+      afterconcat: ['dist/output.js']
+    },
     babel: {
       options: {
         sourceMap: true,
