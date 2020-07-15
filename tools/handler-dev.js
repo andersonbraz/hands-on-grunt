@@ -14,24 +14,44 @@ this.createDist = function () {
     this.version = data.version;
 
     // Criar Diretório de Projeto para Distribuição
-    fse.ensureDir(`dist/${this.project}`, function (err) {
+    fse.ensureDir(`dist/${this.project}`)
+    .then(function(){
       console.log(`Create: ${this.project}`);
+    })
+    .catch(function(err){
+      console.error(err);
     });
-
-    fse.ensureDir(`dist/${this.project}/fonts`, function (err) {
-      console.log(`Fonts creating...`);
+    // Criar Diretório de Fonts para Distribuição
+    fse.ensureDir(`dist/${this.project}/fonts`)
+    .then(function(){
+      console.log(`Directory fonts created...`);
+    })
+    .catch(function(err){
+      console.error(err);
     });
-
-    fse.ensureDir(`dist/${this.project}/src`, function (err) {
-      console.log(`Source creating...`);
+    // Criar Diretório de Source para Distribuição
+    fse.ensureDir(`dist/${this.project}/src`)
+    .then(function(){
+      console.log(`Directory src created...`);
+    })
+    .catch(function(err){
+      console.error(err);
     });
-
-    fse.ensureDir(`dist/${this.project}/styles`, function (err) {
-      console.log(`Styles creating...`);
+    // Criar Diretório de Styles para Distribuição
+    fse.ensureDir(`dist/${this.project}/styles`)
+    .then(function(){
+      console.log(`Directory styles created...`);
+    })
+    .catch(function(err){
+      console.error(err);
     });
-
-    fse.ensureDir(`dist/${this.project}/libs`, function (err) {
-      console.log(`Libs creating...`);
+    // Criar Diretório de Libraries para Distribuição
+    fse.ensureDir(`dist/${this.project}/libs`)
+    .then(function(){
+      console.log(`Directory libs created...`);
+    })
+    .catch(function(err){
+      console.error(err);
     });
 
   });
