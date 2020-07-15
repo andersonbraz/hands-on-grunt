@@ -3,7 +3,6 @@ const tools = require("./tools/handler-dev");
 module.exports = function (grunt) {
 
   grunt.loadNpmTasks("grunt-contrib-connect");
-  grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks("grunt-war");
   grunt.loadNpmTasks("grunt-babel");
 
@@ -16,10 +15,6 @@ module.exports = function (grunt) {
         src: ['src/app.js'],
         dest: 'dist/app.js'
       }
-    },
-    jshint: {
-      beforeconcat: ['src/foo.js', 'src/bar.js'],
-      afterconcat: ['dist/output.js']
     },
     babel: {
       options: {
@@ -42,11 +37,11 @@ module.exports = function (grunt) {
           livereload: true,
         },
       },
-    } 
+    },
     war: {
       target: {
         options: {
-          war_dist_folder: "./dist",
+          war_dist_folder: './dist',
           war_name: `${package.name}-${package.version}`,
           war_extras: [
             {
@@ -67,11 +62,12 @@ module.exports = function (grunt) {
     },
   });
 
-  grunt.registerTask("prepare", function () {
+  grunt.registerTask('prepare', function () {
     tools.cleanDist();
     tools.createDist();
     tools.fillDist(`${package.name}`, config);
   });
 
-  grunt.registerTask("default", ["prepare", "war", "connect",]);
+  grunt.registerTask('default', ['prepare', 'connect']);
+  
 };

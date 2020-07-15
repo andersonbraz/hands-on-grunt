@@ -23,15 +23,19 @@
     "@babel/core": "7.10.4",
     "@babel/preset-env": "7.10.4",
     "angular": "1.8.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.4.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
     "fs": "0.0.1-security",
     "fs-extra": "8.1.0",
     "grunt": "1.2.1",
     "grunt-babel": "8.0.0",
     "grunt-contrib-concat": "1.0.1",
     "grunt-contrib-connect": "2.1.0",
-    "grunt-contrib-jshint": "^2.1.0",
     "grunt-contrib-uglify": "4.0.1",
-    "grunt-war": "0.5.1"
+    "grunt-war": "0.5.1",
+    "prettier": "^2.0.5"
   },
   "dependencies": {
     "bootstrap": "4.5.0",
