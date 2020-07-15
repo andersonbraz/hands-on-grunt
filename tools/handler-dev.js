@@ -62,8 +62,12 @@ this.fillDist = function (project, data) {
 
   const vendorCss = data.vendor.css;
   const vendorJs = data.vendor.js;
+  const vendorFonts = data.vendor.fonts;
+
   const appCss = data.app.css;
   const appJs = data.app.js;
+
+  // Mounted Vendor
 
   vendorCss.forEach(function(element, index, array){
     fse.copy(`${element.value}`, `dist/${project}/styles/vendor.css`)
@@ -76,7 +80,7 @@ this.fillDist = function (project, data) {
   });
 
   vendorJs.forEach(function(element, index, array){
-    fse.copy(`${element.value}`, `dist/${project}/styles/vendor.js`)
+    fse.copy(`${element.value}`, `dist/${project}/libs/vendor.js`)
     .then(function(){
       console.log("Writing: ", element.value);
     })
@@ -84,6 +88,18 @@ this.fillDist = function (project, data) {
       console.error(err);
     });
   });
+
+  vendorFonts.forEach(function(element, index, array){
+    fse.copy(`${element.value}`, `dist/${project}/fonts/`)
+    .then(function(){
+      console.log("Writing: ", element.value);
+    })
+    .catch(function(err){
+      console.error(err);
+    });
+  });
+
+  // Mounted App
 
   appCss.forEach(function(element, index, array){
     fse.copy(`${element.value}`, `dist/${project}/styles/app.css`)
@@ -96,7 +112,7 @@ this.fillDist = function (project, data) {
   });
 
   appJs.forEach(function(element, index, array){
-    fse.copy(`${element.value}`, `dist/${project}/styles/app.js`)
+    fse.copy(`${element.value}`, `dist/${project}/libs/app.js`)
     .then(function(){
       console.log("Writing: ", element.value);
     })
