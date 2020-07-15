@@ -19,6 +19,8 @@
                 "name": "bootstrap",
                 "value": "node_modules/bootstrap/dist/css/bootstrap.css"
             }
+        ],
+        "fonts": [
         ]
     },
     "project": {

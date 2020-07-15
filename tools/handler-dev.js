@@ -43,16 +43,22 @@ this.fillDist = function (project, data) {
   const vendorJs = data.vendor.js;
 
   vendorCss.forEach(function(element, index, array){
-    fse.copy(`${element.value}`, `dist/${project}/styles/vendor.css`, function(err){
-      if (err) return console.error(err);
-      console.log(element.value);
+    fse.copy(`${element.value}`, `dist/${project}/styles/vendor.css`)
+    .then(function(){
+      console.log("Writing: ", element.value);
+    })
+    .catch(function(err){
+      console.error(err);
     });
   });
 
   vendorJs.forEach(function(element, index, array){
-    fse.copy(`${element.value}`, `dist/${project}/libs/vendor.js`, function(err){
-      if (err) return console.error(err);
-      console.log(element.value);
+    fse.copy(`${element.value}`, `dist/${project}/styles/vendor.js`)
+    .then(function(){
+      console.log("Writing: ", element.value);
+    })
+    .catch(function(err){
+      console.error(err);
     });
   });
   
