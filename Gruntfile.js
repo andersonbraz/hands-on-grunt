@@ -30,20 +30,7 @@ module.exports = function (grunt) {
           livereload: true,
         },
       },
-    },
-    watch: {
-      taskName: {
-        options: {
-          // Live reload is now specific to this task
-          livereload: true,
-        },
-        files: [
-          // Files to livereload on
-          "app/js/*.js",
-          "app/templates/*.html",
-        ],
-      },
-    },
+    } 
     war: {
       target: {
         options: {
@@ -74,5 +61,5 @@ module.exports = function (grunt) {
     tools.fillDist(`${package.name}`, config);
   });
 
-  grunt.registerTask("default", ["prepare", "war", "connect"]);
+  grunt.registerTask("default", ["prepare", "war", "connect",]);
 };

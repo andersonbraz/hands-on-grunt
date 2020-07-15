@@ -21,10 +21,6 @@
             }
         ],
         "fonts": [
-            {
-                "name": "Roboto-Black.woff",
-                "value": "node_modules/roboto-fontface/fonts/roboto/Roboto-Black.woff"
-            }
         ]
     },
     "app": {
