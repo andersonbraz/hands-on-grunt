@@ -1,4 +1,5 @@
 {
+    "name": "myconfig",
     "vendor":{
         "js": {
             "jquery": "node_modules/dist/jquery.js",
