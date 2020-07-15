@@ -33,3 +33,14 @@ this.createDist = function(){
 
   });
 };
+
+this.fillDist = function(){
+
+  console.log("Start");
+  fse.readJson("config.json", (err, packageObj) => {
+    if (err) console.error(err)
+    console.log(packageObj.vendor);
+  });
+  console.log("End");
+
+};

@@ -1,4 +1,4 @@
-const devtools = require('./tools/handler-dev'); 
+const tools = require('./tools/handler-dev'); 
 
 module.exports = function (grunt) {
 
@@ -56,8 +56,12 @@ module.exports = function (grunt) {
   });
 
   grunt.registerTask("prepare", function () {
-    devtools.cleanDist();
-    devtools.createDist();
+    tools.cleanDist();
+    tools.createDist();
+  });
+
+  grunt.registerTask("test", function () {
+    tools.fillDist();
   });
 
   grunt.registerTask("default", ['prepare', 'war', 'connect']);
