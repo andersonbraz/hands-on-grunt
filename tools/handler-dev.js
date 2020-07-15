@@ -33,6 +33,5 @@ this.createDist = function () {
 };
 
 this.fillDist = function (data) {
-
-  console.log(data.vendor.js.value);
+  console.log(data.vendor.js);
 };
