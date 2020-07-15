@@ -7,6 +7,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-babel');
 
   const package = grunt.file.readJSON("package.json");
+  const config = grunt.file.readJSON("config.json");
 
   grunt.initConfig({
     babel: {
@@ -61,7 +62,7 @@ module.exports = function (grunt) {
   });
 
   grunt.registerTask("test", function () {
-    tools.fillDist();
+    tools.fillDist(config);
   });
 
   grunt.registerTask("default", ['prepare', 'war', 'connect']);

@@ -32,9 +32,9 @@ this.createDist = function () {
   });
 };
 
-this.fillDist = function () {
-  fse.readJson("../config.json", function (err, data) {
-    if (err) console.error(err);
-    console.log(JSON.stringify(data));
-  });
+this.fillDist = function (data) {
+  const config = JSON.parse(data.verdor);
+
+    console.log(config);
+
 };
