@@ -1,5 +1,5 @@
 
-const tools = require('./tools/handler-dev');
+const tools = require('./tools/handler-dist');
 
 module.exports = function (grunt) {
 
