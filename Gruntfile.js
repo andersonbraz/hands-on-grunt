@@ -12,6 +12,7 @@ module.exports = function (grunt) {
   grunt.registerTask('mount-dev', function () {
     tools.cleanDev();
     tools.createDev();
+    tools.fillDev(config);
   });
 
   grunt.registerTask('default', ['mount-dev']);

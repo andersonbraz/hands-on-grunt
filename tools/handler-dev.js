@@ -35,3 +35,31 @@ this.createDev = function () {
 
 };
 
+this.fillDev = function (data) {
+
+  const vendorCss = data.vendor.css;
+  const vendorJs = data.vendor.js;
+
+  // Mounted Vendor
+
+  vendorCss.forEach(function(element, index, array){
+    fse.copy(`${element.pack}`, `${element.target}`)
+    .then(function(){
+      console.log("Writing: ", element.target);
+    })
+    .catch(function(err){
+      console.error(err);
+    });
+  });
+
+  vendorJs.forEach(function(element, index, array){
+    fse.copy(`${element.pack}`, `${element.target}`)
+    .then(function(){
+      console.log("Writing: ", element.target);
+    })
+    .catch(function(err){
+      console.error(err);
+    });
+  });
+  
+};
