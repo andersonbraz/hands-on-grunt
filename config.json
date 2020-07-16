@@ -3,7 +3,7 @@
         "js": [
             {
                 "pack": "node_modules/angular/angular.js",
-                "target": "src/assets/angular/angular.js"
+                "target": "src/assets/js/angular.js"
             },
             {
                 "pack": "node_modules/jquery/dist/jquery.js",

@@ -33,33 +33,49 @@ this.createDev = function () {
     console.error(err);
   });
 
+  console.log("P1");
+
 };
 
-this.fillDev = function (data) {
+this.fillDev = function(data){
 
   const vendorCss = data.vendor.css;
   const vendorJs = data.vendor.js;
 
   // Mounted Vendor
-
   vendorCss.forEach(function(element, index, array){
+    fse.copy(element.pack, element.target, function(err){
+      if (err) return console.error(err);
+      console.log(`Copied: ${element.target}`);
+    }); 
+    //copies file
+    /*
     fse.copy(`${element.pack}`, `${element.target}`)
     .then(function(){
-      console.log("Writing: ", element.target);
+      console.log(`Writing: ${element.target}`));
     })
     .catch(function(err){
       console.error(err);
     });
+    */
   });
 
   vendorJs.forEach(function(element, index, array){
+    fse.copy(element.pack, element.target, function(err){
+      if (err) return console.error(err);
+      console.log(`Copied: ${element.target}`);
+    }); 
+    /*
     fse.copy(`${element.pack}`, `${element.target}`)
     .then(function(){
-      console.log("Writing: ", element.target);
+      console.log(`Writing: ${element.target}`));
     })
     .catch(function(err){
       console.error(err);
     });
+    */
   });
+
+  console.log("P2");
   
 };
