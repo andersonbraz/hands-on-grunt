@@ -2,31 +2,32 @@
     "vendor": {
         "js": [
             {
-                "name": "jquery.js",
-                "value": "node_modules/jquery/dist/jquery.js"
+                "pack": "node_modules/angular/angular.js",
+                "target": "src/assets/angular/angular.js"
             },
             {
-                "name": "popper.js",
-                "value": "node_modules/popper.js/dist/popper.js"
+                "pack": "node_modules/jquery/dist/jquery.js",
+                "target": "src/assets/js/jquery.js"
             },
             {
-                "name": "bootstrap.js",
-                "value": "node_modules/bootstrap/dist/js/bootstrap.js"
+                "pack": "node_modules/popper.js/dist/popper.js",
+                "target": "src/assets/js/popper.js"
+            },
+            {
+                "pack": "node_modules/bootstrap/dist/js/bootstrap.js",
+                "target": "src/assets/js/bootstrap.js"
             }
         ],
         "css": [
             {
-                "name": "bootstrap.css",
-                "value": "node_modules/bootstrap/dist/css/bootstrap.css"
+                "pack": "node_modules/bootstrap/dist/css/bootstrap.css",
+                "target": "src/assets/css/bootstrap.css"
             }
         ],
-        "fonts": [
-        ]
+        "fonts": []
     },
     "app": {
-        "js": [
-        ],
-        "css": [
-        ]
+        "js": [],
+        "css": []
     }
 }

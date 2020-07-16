@@ -1,0 +1,32 @@
+{
+    "vendor": {
+        "js": [
+            {
+                "name": "jquery.js",
+                "value": "node_modules/jquery/dist/jquery.js"
+            },
+            {
+                "name": "popper.js",
+                "value": "node_modules/popper.js/dist/popper.js"
+            },
+            {
+                "name": "bootstrap.js",
+                "value": "node_modules/bootstrap/dist/js/bootstrap.js"
+            }
+        ],
+        "css": [
+            {
+                "name": "bootstrap.css",
+                "value": "node_modules/bootstrap/dist/css/bootstrap.css"
+            }
+        ],
+        "fonts": [
+        ]
+    },
+    "app": {
+        "js": [
+        ],
+        "css": [
+        ]
+    }
+}

@@ -9,10 +9,11 @@ module.exports = function (grunt) {
   grunt.initConfig({
   });
 
-  grunt.registerTask('test', function () {
-    console.log("test");
+  grunt.registerTask('mount-dev', function () {
+    tools.cleanDev();
+    tools.createDev();
   });
 
-  grunt.registerTask('default', ['test']);
+  grunt.registerTask('default', ['mount-dev']);
   
 };
